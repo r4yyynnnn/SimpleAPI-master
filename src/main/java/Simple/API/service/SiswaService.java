@@ -29,7 +29,7 @@ public class SiswaService {
         Optional<SiswaEntity> studentOptional = studentRepository
                 .findStudentByNisn(student.getNisn());
         if (studentOptional.isPresent()){
-            throw new IllegalStateException("Nisn Sudah Ada");
+            throw new IllegalStateException("Nisn Sudah Terdaftar");
         }
         studentRepository.save(student);
     }
@@ -55,7 +55,7 @@ public class SiswaService {
                 !newDataStudent.getNisn().equals(student.getNisn())) {
             Optional<SiswaEntity> studentOptional = studentRepository.findStudentByNisn(newDataStudent.getNisn());
             if (studentOptional.isPresent()) {
-                throw new IllegalStateException("Nisn Sudah Ada");
+                throw new IllegalStateException("Nisn Sudah Terdaftar");
             }
             student.setNisn(newDataStudent.getNisn());
         }

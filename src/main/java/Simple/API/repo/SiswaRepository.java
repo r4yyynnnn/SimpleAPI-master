@@ -15,3 +15,4 @@ public interface SiswaRepository
     Optional<SiswaEntity> findStudentByNisn(Integer nisn);
 }
 
+  

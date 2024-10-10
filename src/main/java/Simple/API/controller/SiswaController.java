@@ -26,7 +26,7 @@ public class SiswaController {
     }
 
 
-    //Controller Get 2 -->
+    //Controller Get 2 --> Untuk Memanggil Data Siswa Dengan ID
     @GetMapping("/{id}")
     public SiswaEntity getStudentById(@PathVariable Long id) {
         return studentService.getStudentById(id)
@@ -34,21 +34,21 @@ public class SiswaController {
     }
 
 
-    //Controller Register -->
+    //Controller Register --> Untuk Mendaftarkan Siswa
     @PostMapping
     public void registerNewStudent(@RequestBody SiswaEntity student) {
         studentService.addNewStudent(student);
     }
 
 
-    //Controller Update -->
+    //Controller Update --> Untuk Update Data Siswa
     @PutMapping("/{id}")
     public void updateStudent(@PathVariable Long id, @RequestBody SiswaEntity newDataStudent) {
         studentService.updateStudent(id, newDataStudent);
     }
 
 
-    //Controller Delete -->
+    //Controller Delete --> Untuk Menghapus Data Siswa
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
         studentService.deleteStudent(id);

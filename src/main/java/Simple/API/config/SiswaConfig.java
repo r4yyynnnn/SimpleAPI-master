@@ -17,8 +17,6 @@ public class SiswaConfig {
         return args -> {
 
             //input data siswa
-
-
             SiswaEntity eza = new SiswaEntity(
                     31234567,
                     "Eza",
@@ -26,8 +24,7 @@ public class SiswaConfig {
                     "XII RPL 2"
             );
 
-            //Save Data Siswa
-
+            //Menyimpan Data Siswa
             repository.saveAll(
                     List.of(eza)
             );
